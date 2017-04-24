@@ -5,7 +5,7 @@ layout: default
   <div class="container">
     <div class="text-center">
       <h1 class="no-m ms-site-title color-white center-block ms-site-title-lg mt-2 animated zoomInDown animation-delay-5"><span>{{ page.title }}</span></h1>
-      <p class="lead lead-lg color-white text-center center-block mt-2 mw-800 text-uppercase fw-300 animated fadeInUp animation-delay-7">{% if page.category == 'coffee-activities' %}{{ page.date | date:"%Y年%m月%d日" }}{% else %}您的位置：<a href="{{ site.url }}">首页</a> / <a href="{{ page.type-en }}">{{ page.type }}</a> / {{ page.title }}{% endif %}</p>
+      <p class="lead lead-lg color-white text-center center-block mt-2 mw-800 text-uppercase fw-300 animated fadeInUp animation-delay-7">{% if page.category == 'coffee-activities' %}{{ page.date | date:"%Y年%m月%d日" }}{% else %}您的位置：<a href="{{ site.url }}">首页</a> / <a href="{{ site.url }}/{{ page.type-en }}/">{{ page.type }}</a> / {{ page.title }}{% endif %}</p>
     </div>
   </div>
 </div>
