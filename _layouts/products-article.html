@@ -1,0 +1,82 @@
+---
+layout: default
+---
+<div class="container">
+  <div class="row">
+    <div class="col-md-6">
+      <div id="carousel-product" class="ms-carousel ms-carousel-thumb carousel slide animated zoomInUp animation-delay-4" data-ride="carousel" data-interval="0">
+        <div class="card card-block">
+          <div class="carousel-inner" role="listbox">
+            <div class="item active"><img src="/images/products/{{ page.image }}-1.jpg" alt="{{ page.title }}"></div>
+            <div class="item"><img src="/images/products/{{ page.image }}-2.jpg" alt="{{ page.title }}"></div>
+            <div class="item"><img src="/images/products/{{ page.image }}-3.jpg" alt="{{ page.title }}"></div>
+            <div class="item"><img src="/images/products/{{ page.image }}-4.jpg" alt="{{ page.title }}"></div>
+            <div class="item"><img src="/images/products/{{ page.image }}-5.jpg" alt="{{ page.title }}"></div>
+          </div>
+        </div>
+        <ol class="carousel-indicators carousel-indicators-tumbs carousel-indicators-tumbs-outside">
+          <li data-target="#carousel-product" data-slide-to="0" class="active"><img src="/images/products/{{ page.image }}-1s.jpg" alt="{{ page.title }}"></li>
+          <li data-target="#carousel-product" data-slide-to="1"><img src="/images/products/{{ page.image }}-2s.jpg" alt="{{ page.title }}"></li>
+          <li data-target="#carousel-product" data-slide-to="2"><img src="/images/products/{{ page.image }}-3s.jpg" alt="{{ page.title }}"></li>
+          <li data-target="#carousel-product" data-slide-to="3"><img src="/images/products/{{ page.image }}-4s.jpg" alt="{{ page.title }}"></li>
+          <li data-target="#carousel-product" data-slide-to="4"><img src="/images/products/{{ page.image }}-5s.jpg" alt="{{ page.title }}"></li>
+        </ol>
+      </div>
+    </div>
+    <div class="col-md-6">
+      <div class="card animated zoomInDown animation-delay-4">
+        <div class="card-block">
+          <h2>{{ page.title }}</h2>
+          <div class="mb-2 mt-4">
+            <div class="row">
+              <div class="col-sm-12">
+                <h2 class="color-success no-m text-normal">¥ {{ page.price }} </h2>
+              </div>
+            </div>
+          </div>
+          <p class="lead"><a class="btn btn-raised btn-primary mr-1" href="javascript:void(0)" data-toggle="modal" data-target="#ms-account-modal"><i class="fa fa-shopping-cart"></i> 点击购买</a><a class="btn btn-raised btn-info mr-1" target="_blank" href="http://wpa.qq.com/msgrd?v=3&amp;uin={{ site.qq }}&amp;site=qq&amp;menu=yes"><i class="fa fa-qq"></i> QQ咨询</a><a class="btn btn-raised btn-success" href="tel:{{ site.tel }}"><i class="fa fa-phone"></i> 电话联系</a></p>
+          <p class="lead">{{ page.description }}</p>
+          <ul class="list-unstyled">
+            {{ content }}
+          </ul>
+        </div>
+      </div>
+    </div> 
+  </div>
+  <h2 class="mt-4 mb-4 right-line">更多{{ page.type }}</h2>
+  <div class="row">{% if page.type-en == 'coffee-machine' %}{% for post in site.categories["coffee-machine"] %}
+    <div class="col-md-4">
+      <div class="card ms-feature wow zoomInUp">
+        <div class="card-block text-center">
+          <a href="{{ site.url }}{{ post.url }}"><img src="/images/products/{{ post.image }}-1.jpg" alt="{{ post.title }}" class="img-responsive center-block"></a>
+          <h4 class="text-normal text-center">{{ post.title }}</h4>
+          <p>{{ post.description }}</p>
+          <div class="mt-2"><span class="ms-tag ms-tag-success">¥ {{ post.price }}</span></div>
+          <a href="{{ site.url }}{{ post.url }}" class="btn btn-primary btn-sm btn-block btn-raised mt-2 no-mb"><i class="fa fa-search"></i> 了解更多</a>
+        </div>
+      </div>
+    </div>{% endfor %}{% endif %}{% if page.type-en == 'coffee-bean' %}{% for post in site.categories["coffee-bean"] %}
+    <div class="col-md-4">
+      <div class="card ms-feature wow zoomInUp">
+        <div class="card-block text-center">
+          <a href="{{ site.url }}{{ post.url }}"><img src="/images/products/{{ post.image }}-1.jpg" alt="{{ post.title }}" class="img-responsive center-block"></a>
+          <h4 class="text-normal text-center">{{ post.title }}</h4>
+          <p>{{ post.description }}</p>
+          <div class="mt-2"><span class="ms-tag ms-tag-success">¥ {{ post.price }}</span></div>
+          <a href="{{ site.url }}{{ post.url }}" class="btn btn-primary btn-sm btn-block btn-raised mt-2 no-mb"><i class="fa fa-search"></i> 了解更多</a>
+        </div>
+      </div>
+    </div>{% endfor %}{% endif %}{% if page.type-en == 'ware' %}{% for post in site.categories["ware"] %}
+    <div class="col-md-4">
+      <div class="card ms-feature wow zoomInUp">
+        <div class="card-block text-center">
+          <a href="{{ site.url }}{{ post.url }}"><img src="/images/products/{{ post.image }}-1.jpg" alt="{{ post.title }}" class="img-responsive center-block"></a>
+          <h4 class="text-normal text-center">{{ post.title }}</h4>
+          <p>{{ post.description }}</p>
+          <div class="mt-2"><span class="ms-tag ms-tag-success">¥ {{ post.price }}</span></div>
+          <a href="{{ site.url }}{{ post.url }}" class="btn btn-primary btn-sm btn-block btn-raised mt-2 no-mb"><i class="fa fa-search"></i> 了解更多</a>
+        </div>
+      </div>
+    </div>{% endfor %}{% endif %}
+  </div>
+</div>

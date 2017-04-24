@@ -1,0 +1,201 @@
+---
+layout: default
+category: home
+full_title: 咖纳咖啡
+---
+<header class="ms-hero ms-hero-black mb-4">
+  <div id="carousel-header" class="carousel carousel-header slide" data-ride="carousel" data-interval="5000">
+    <ol class="carousel-indicators">
+      <li data-target="#carousel-header" data-slide-to="0" class="active"></li>
+      <li data-target="#carousel-header" data-slide-to="1"></li>
+      <li data-target="#carousel-header" data-slide-to="2"></li>
+    </ol>
+    <div class="carousel-inner" role="listbox">
+      <div class="item active">
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-6 col-md-7">
+              <div class="carousel-caption">
+                <h1 class="color-white text-center no-mt mb-4 animated zoomInDown animation-delay-7"><b>咖啡豆</b></h1>
+                <ul class="list-unstyled list-hero">
+                  <li><i class="animated flipInX animation-delay-6 color-warning zmdi zmdi-cloud"></i><span class="color-white animated fadeInRightTiny animation-delay-7"><b>得天独厚种植环境，肥沃土壤和气候</b></span></li>
+                  <li><i class="animated flipInX animation-delay-8 color-info zmdi zmdi-globe"></i><span class="color-white animated fadeInRightTiny animation-delay-9"><b>精心挑选咖啡豆，多重严格处理过程</b></span></li>
+                  <li><i class="animated flipInX animation-delay-10 color-success zmdi zmdi-download"></i><span class="color-white animated fadeInRightTiny animation-delay-11"><b>有效保证咖啡豆香气不受破坏</b></span></li>
+                </ul>
+                <div class="text-center">
+                  <a href="{{ site.url }}/coffee-bean/" class="btn btn-success btn-xlg btn-raised animated flipInX animation-delay-16"><i class="fa fa-search"></i> 了解更多</a>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-6 col-md-5"><img src="/images/home/billboard-coffee-bean.png" alt="咖啡豆" class="img-responsive mt-6 center-block text-center animated zoomInDown animation-delay-5"></div>
+          </div>
+        </div>
+      </div>
+      <div class="item">
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-6 col-md-7">
+              <div class="carousel-caption">
+                <h1 class="color-white text-center no-mt mb-4 animated zoomInDown animation-delay-7"><b>咖纳咖啡</b></h1>
+                <ul class="list-unstyled list-hero">
+                  <li><i class="animated flipInX animation-delay-6 color-warning zmdi zmdi-cloud"></i><span class="color-white animated fadeInRightTiny animation-delay-7"><b>xxx</b></span></li>
+                  <li><i class="animated flipInX animation-delay-8 color-info zmdi zmdi-globe"></i><span class="color-white animated fadeInRightTiny animation-delay-9"><b>xxx</b></span></li>
+                  <li><i class="animated flipInX animation-delay-10 color-success zmdi zmdi-download"></i><span class="color-white animated fadeInRightTiny animation-delay-11"><b>xxx</b></span></li>
+                </ul>
+                <div class="text-center">
+                  <a href="{{ site.url }}/about/" class="btn btn-success btn-xlg btn-raised animated flipInX animation-delay-16"><i class="fa fa-search"></i> 认识咖纳</a>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-6 col-md-5"><img src="/images/home/billboard-gana.png" alt="认识咖纳" class="img-responsive mt-6 center-block text-center animated zoomInDown animation-delay-5"></div>
+          </div>
+        </div>
+      </div>
+      <div class="item">
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-6 col-md-7">
+              <div class="carousel-caption">
+                <h1 class="color-white text-center no-mt mb-4 animated zoomInDown animation-delay-7"><b>LEHEHE全自动咖啡机</b></h1>
+                <ul class="list-unstyled list-hero">
+                  <li><i class="animated flipInX animation-delay-6 color-warning zmdi zmdi-cloud"></i><span class="color-white animated fadeInRightTiny animation-delay-7"><b>液晶显示屏，一键制作，30秒极速出杯</b></span></li>
+                  <li><i class="animated flipInX animation-delay-8 color-info zmdi zmdi-globe"></i><span class="color-white animated fadeInRightTiny animation-delay-9"><b>自动清洗，自动提示加水倒渣</b></span></li>
+                  <li><i class="animated flipInX animation-delay-10 color-white zmdi zmdi-download"></i><span class="color--white animated fadeInRightTiny animation-delay-11"><b>完美奶泡系统</b></span></li>
+                </ul>
+                <div class="text-center">
+                  <a href="{{ site.url }}/coffee-machine/lhh-a9c.html" class="btn btn-success btn-xlg btn-raised animated flipInX animation-delay-16"><i class="fa fa-search"></i> 了解更多</a>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-6 col-md-5"><img src="/images/home/billboard-lhh-a9c.png" alt="LEHEHE全自动咖啡机" class="img-responsive mt-6 center-block text-center animated zoomInDown animation-delay-5">
+          </div>
+        </div>
+      </div>
+    </div>
+    <a href="#carousel-header" class="btn-circle btn-circle-xs btn-circle-raised btn-circle-primary left carousel-control" role="button" data-slide="prev"><i class="zmdi zmdi-chevron-left"></i></a>
+    <a href="#carousel-header" class="btn-circle btn-circle-xs btn-circle-raised btn-circle-primary right carousel-control" role="button" data-slide="next"><i class="zmdi zmdi-chevron-right"></i></a>
+  </div>
+</header>
+<div class="container">
+  <h2 class="text-center color-primary mb-4">咖啡活动</h2>
+  <div class="owl-dots"></div>
+  <div class="owl-carousel owl-theme">{% for post in site.categories["business"] %}
+    <div class="card">
+      <div class="withripple zoom-img">
+        <a href="{{ site.url }}{{ post.url }}"><img src="/images/coffee-activities/{{ post.image }}.jpg" alt="{{ post.title }}" class="img-responsive"></a>
+      </div>
+      <div class="card-block">
+        <h3 class="color-primary">{{ post.title }}</h3>
+        <p>{{ post.description }}</p>
+        <p class="text-right"><a href="{{ site.url }}{{ post.url }}" class="btn btn-primary btn-raised text-right" role="button"><i class="zmdi zmdi-collection-image-o"></i> 阅读全文</a></p>
+      </div>
+    </div>{% endfor %}{% for post in site.categories["commonweal"] %}
+    <div class="card">
+      <div class="withripple zoom-img">
+        <a href="{{ site.url }}{{ post.url }}"><img src="/images/coffee-activities/{{ post.image }}.jpg" alt="{{ post.title }}" class="img-responsive"></a>
+      </div>
+      <div class="card-block">
+        <h3 class="color-primary">{{ post.title }}</h3>
+        <p>{{ post.description }}</p>
+        <p class="text-right"><a href="{{ site.url }}{{ post.url }}" class="btn btn-primary btn-raised text-right" role="button"><i class="zmdi zmdi-collection-image-o"></i> 阅读全文</a></p>
+      </div>
+    </div>{% endfor %}
+  </div>
+</div>
+<div class="wrap wrap-danger mt-6">
+  <h2 class="text-center no-m">客户评价</h2>
+  <div id="carousel-example-generic" class="carousel carousel-cards carousel-fade slide" data-ride="carousel" data-interval="7000">
+    <ol class="carousel-indicators">
+      <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+      <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+    </ol>
+    <div class="carousel-inner" role="listbox">
+      <div class="item active">
+        <div class="carousel-caption">
+          <div class="container">
+            <div class="row">
+              <div class="col-md-4">
+                <div class="card animated flipInX animation-delay-2">
+                  <blockquote class="blockquote-avatar withripple">
+                    <img src="/images/home/avatar.png" alt="客户评价" class="avatar hidden-xs">
+                    <p>打算买一台咖啡机提升公司的福利，咖纳咖啡却给予我们意外惊喜，再者，售后售前的解释和执行非常到位，与其说购买的是咖啡机，不如说购买了全套贴心的服务，就目前来说还算满意的。</p>
+                  </blockquote>
+                </div>
+              </div>
+              <div class="col-md-4">
+                <div class="card animated flipInX animation-delay-3">
+                  <blockquote class="blockquote-avatar withripple">
+                    <img src="/images/home/avatar.png" alt="客户评价" class="avatar hidden-xs">
+                    <p>运营者的决策很重要，我们提出要求时，咖纳的业务员马上就能反应过来，很快就反馈满意信息给我们了，而且经常与我们联系，提供新鲜的信息，尽管是同行，我愿意把咖纳咖啡推荐给有需要的人。</p>
+                  </blockquote>
+                </div>
+              </div>
+              <div class="col-md-4">
+                <div class="card animated flipInX animation-delay-4">
+                  <blockquote class="blockquote-avatar withripple">
+                    <img src="/images/home/avatar.png" alt="客户评价" class="avatar hidden-xs">
+                    <p>买了2年没有出现什么问题，只是当时买的时候是买的家庭装，现在公司人员多了，咖啡机的水箱开始不够了，正准备申请再买一个水箱容量大一些的，就等审批了。</p>
+                  </blockquote>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="item">
+        <div class="carousel-caption">
+          <div class="container">
+            <div class="row">
+              <div class="col-md-4">
+                <div class="card animated flipInX animation-delay-2">
+                  <blockquote class="blockquote-avatar withripple">
+                    <img src="/images/home/avatar.png" alt="客户评价" class="avatar hidden-xs">
+                    <p>2014年开设了外宾招待所，正苦恼没有比较好的咖啡豆，毕竟行家一下子就试出了好坏，即使有咖啡师，也需要找出性价比最好的咖啡豆，有个玩咖啡的朋友推荐咖纳的咖啡豆，就不会让我失望，而且业务员经常过来进行交流。</p>
+                  </blockquote>
+                </div>
+              </div>
+              <div class="col-md-4">
+                <div class="card animated flipInX animation-delay-3">
+                  <blockquote class="blockquote-avatar withripple">
+                    <img src="/images/home/avatar.png" alt="客户评价" class="avatar hidden-xs">
+                    <p>在与咖纳业务员接触的过程中，我发现咖纳咖啡有很多与众不同的地方，在保证“互盈”的前提下提出了不同的方案，业务员肯花时间去推销自己的产品之余并且给了客户公司很多中肯的建议，这种营销方式我很喜欢。</p>
+                  </blockquote>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <a class="left carousel-control btn btn-white btn-raised" href="#carousel-example-generic" role="button" data-slide="prev"><i class="zmdi zmdi-arrow-left"></i><span class="sr-only">Previous</span></a>
+    <a class="right carousel-control btn btn-white btn-raised" href="#carousel-example-generic" role="button" data-slide="next"><i class="zmdi zmdi-arrow-right"></i><span class="sr-only">Next</span></a>
+  </div>
+</div>
+<div class="container mt-6">
+  <div class="row">
+    <div class="col-md-12">{% for post in site.categories["coffee-machine"] %}
+      <div class="col-lg-4 col-md-6 col-xs-12">
+        <div class="card ms-feature">
+          <div class="card-block text-center">
+            <a href="{{ site.url }}{{ post.url }}"><img src="/images/products/{{ post.image }}-1.jpg" alt="{{ post.title }}" class="img-responsive center-block"></a>
+            <h4 class="text-normal text-center">{{ post.title }}</h4>
+            <p>{{ post.description }}</p>
+            <div class="mt-2"><span class="ms-tag ms-tag-success">¥ {{ post.price }}</span></div>
+            <a href="{{ site.url }}{{ post.url }}" class="btn btn-primary btn-sm btn-block btn-raised mt-2 no-mb"><i class="fa fa-search"></i> 了解更多</a>
+          </div>
+        </div>
+      </div>{% endfor %}{% for post in site.categories["coffee-bean"] %}
+      <div class="col-lg-4 col-md-6 col-xs-12">
+        <div class="card ms-feature">
+          <div class="card-block text-center">
+            <a href="{{ site.url }}{{ post.url }}"><img src="/images/products/{{ post.image }}-1.jpg" alt="{{ post.title }}" class="img-responsive center-block"></a>
+            <h4 class="text-normal text-center">{{ post.title }}</h4>
+            <p>{{ post.description }}</p>
+            <div class="mt-2"><span class="ms-tag ms-tag-success">¥ {{ post.price }}</span></div>
+            <a href="{{ site.url }}{{ post.url }}" class="btn btn-primary btn-sm btn-block btn-raised mt-2 no-mb"><i class="fa fa-search"></i> 了解更多</a>
+          </div>
+        </div>
+      </div>{% endfor %}
+    </div>
+  </div>
+</div>

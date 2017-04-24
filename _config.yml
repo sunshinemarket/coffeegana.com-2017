@@ -1,0 +1,34 @@
+url: http://www.coffeegana.com
+
+title: 咖纳咖啡
+
+keywords: 咖纳咖啡
+
+description: 咖纳咖啡
+
+permalink: /products/:title.html
+
+address: 广东省佛山市顺德区勒流光大市场北路5号四楼
+
+tel: 0757-29283720
+
+qq: 2667983179
+
+email: 2667983179@qq.com
+
+relative_permalinks: false
+
+exclude:
+  - README.md
+
+assets:
+  dirname: assets
+  baseurl: /assets/
+  sources:
+    - _assets/js
+    - _assets/css
+  js_compressor: uglifier
+  css_compressor: sass
+  cache: true
+  cache_assets: true
+  gzip: []

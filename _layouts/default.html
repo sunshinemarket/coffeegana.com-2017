@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="zh">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>{% if page.full_title %}{{ page.full_title }}{% else %}{% if page.title %}{{ page.title }}-{% endif %}{{ site.title }}{% endif %}</title>
+    <meta name="keywords" content="{% if page.keywords %}{{ page.keywords }}{% else %}{{ site.keywords }}{% endif %}">
+    <meta name="description" content="{% if page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}">
+    <link rel="canonical" href="{{ site.url }}{{ page.url | replace:'index.html','' }}">
+    <meta name="applicable-device" content="pc,mobile">
+    <link rel="apple-touch-icon" href="{{ site.url }}/images/assets/gana-icon.jpg">
+    <meta name="apple-mobile-web-app-title" content="咖纳咖啡">
+    {% stylesheet application %}
+    <!--[if lt IE 9]>
+      <script src="/assets/html5shiv.min.js"></script>
+      <script src="/assets/respond.min.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <div class="sb-site-container">
+      <div class="modal modal-primary" id="ms-account-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+        <div class="modal-dialog animated zoomIn animated-3x" role="document">
+          <div class="modal-content">
+            <div class="modal-header shadow-2dp no-pb">
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true"><i class="zmdi zmdi-close"></i></span>
+              </button>
+              <div class="modal-title text-center"><img src="/images/assets/gana-logo-navbar.png" alt="咖纳咖啡logo"></div>
+              <div class="modal-header-tabs">
+                <ul class="nav nav-tabs nav-tabs-full nav-tabs-1 nav-tabs-primary" role="tablist">
+                  <li role="presentation" class="active">
+                    <a href="#ms-login-tab" aria-controls="ms-login-tab" role="tab" data-toggle="tab" class="withoutripple"><i class="zmdi zmdi-shopping-cart"></i> 咖纳商城</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="modal-body">
+              <div class="tab-content">
+                <div role="tabpanel" class="tab-pane fade active in" id="ms-login-tab">
+                  <form autocomplete="off">
+                    <fieldset>
+                      <p align="center"><img src="/images/assets/weidian.jpg" alt="咖纳商城"></p>
+                      <a class="btn btn-block btn-raised btn-primary" href="https://weidian.com/?userid=970849833&winzoom=1" target="_blank"><i class="fa fa-map-marker"></i> 进入咖纳商城</a>
+                    </fieldset>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <header class="ms-header ms-header-white">
+        <div class="container container-full">
+          <div class="ms-title">
+            <a href="{{ site.url }}"><img src="/images/assets/gana-logo.png" alt="咖纳咖啡logo"></a>
+          </div>
+          <div class="header-right">
+            <a href="{{ site.url }}/video/" class="btn-circle btn-circle-primary no-focus"><i class="zmdi zmdi-videocam"></i></a>
+            <a href="javascript:void(0)" class="btn-circle btn-circle-primary no-focus" data-toggle="modal" data-target="#ms-account-modal"><i class="zmdi zmdi-shopping-cart"></i></a>
+            <a href="javascript:void(0)" class="btn-ms-menu btn-circle btn-circle-primary sb-toggle-left animated"><i class="zmdi zmdi-menu"></i></a>
+          </div>
+        </div>
+      </header>
+      <nav class="navbar navbar-static-top yamm ms-navbar ms-navbar-primary">
+        <div class="container container-full">
+          <div class="navbar-header">
+            <a class="navbar-brand" href="{{ site.url }}">
+              <img src="/images/assets/gana-logo-navbar.png" alt="咖纳咖啡logo">
+            </a>
+          </div>
+          <div id="navbar" class="navbar-collapse collapse">
+            <ul class="nav navbar-nav">
+              <li class="{% if page.category == 'home' %}active{% endif %}"><a href="{{ site.url }}" class="dropdown-toggle animated fadeIn">首页</a></li>
+              <li class="{% if page.category == 'about' %}active{% endif %}"><a href="{{ site.url }}/about/" class="dropdown-toggle animated fadeIn">认识咖纳</a></li>
+              <li class="{% if page.category == 'products' %}dropdown active{% else %}dropdown{% endif %}">
+                <a href="javascript:void(0)" class="dropdown-toggle animated fadeIn" data-toggle="dropdown" data-hover="dropdown" data-name="page">产品中心</a>
+                <ul class="dropdown-menu dropdown-menu-left animated-2x animated fadeIn">
+                  <li><a href="{{ site.url }}/coffee-machine/" class="dropdown-link">咖啡机器</a></li>
+                  <li><a href="{{ site.url }}/coffee-bean/" class="dropdown-link">咖啡豆</a></li>
+                  <li><a href="{{ site.url }}/coffee-ware/" class="dropdown-link">器皿</a></li>
+                </ul>
+              </li>
+              <li class="{% if page.category == 'coffee-activities' %}dropdown active{% else %}dropdown{% endif %}">
+                <a href="javascript:void(0)" class="dropdown-toggle animated fadeIn" data-toggle="dropdown" data-hover="dropdown" data-name="page">咖啡活动</a>
+                <ul class="dropdown-menu dropdown-menu-left animated-2x animated fadeIn">
+                  <li><a href="{{ site.url }}/business/" class="dropdown-link">商业活动</a></li>
+                  <li><a href="{{ site.url }}/commonweal/" class="dropdown-link">公益活动</a></li>
+                </ul>
+              </li>
+              <li class="{% if page.category == 'coffee-shop' %}active{% endif %}"><a href="{{ site.url }}/coffee-shop/" class="dropdown-toggle animated fadeIn">联盟咖啡店</a></li>
+              <li class="{% if page.category == 'contact' %}active{% endif %}"><a href="{{ site.url }}/contact/" class="dropdown-toggle animated fadeIn">联系我们</a></li>
+            </ul>
+          </div>
+          <a href="javascript:void(0)" class="sb-toggle-left btn-navbar-menu"><i class="zmdi zmdi-menu"></i></a>
+        </div>
+      </nav>
+      {{ content }}
+      <aside class="ms-footbar">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-4 ms-footer-col">
+              <div class="ms-footbar-block">
+                <h3 class="ms-footbar-title">联盟咖啡店</h3>
+                <ul class="list-unstyled ms-icon-list three_cols">{% for post in site.categories["coffee-shop"] %}
+                  <li><a href="{{ site.url }}{{ post.url }}"><i class="fa fa-map-signs"></i> {{ post.title }}</a></li>{% endfor %}
+                </ul>
+              </div>
+            </div>
+            <div class="col-md-4 ms-footer-col ms-footer-alt-color">
+              <div class="ms-footbar-block">
+                <h3 class="ms-footbar-title text-center mb-2">咖纳商城</h3>
+                <div class="ms-footer-media">
+                  <p align="center"><img src="/images/assets/weidian.jpg" alt="咖纳商城"></p>
+                  <p align="center"><a class="btn btn-raised btn-primary" href="https://weidian.com/?userid=970849833&winzoom=1" target="_blank"><i class="fa fa-map-marker"></i> 进入咖纳商城</a></p>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4 ms-footer-col ms-footer-text-center">
+              <div class="ms-footbar-block">
+                <div class="ms-footbar-title"><img src="/images/assets/gana-logo-foot.png" alt="咖纳咖啡logo"></div>
+                <address class="no-mb">
+                  <p><i class="color-danger-light zmdi zmdi-pin mr-1"></i> {{ site.address }}</p>
+                  <p><i class="color-royal-light zmdi zmdi-phone mr-1"></i><a href="tel:{{ site.tel }}">{{ site.tel }}</a></p>
+                  <p><i class="color-success-light fa fa-qq mr-1"></i><a target="_blank" href="http://wpa.qq.com/msgrd?v=3&amp;uin={{ site.qq }}&amp;site=qq&amp;menu=yes">{{ site.qq }}</a></p>
+                  <p><i class="color-info-light zmdi zmdi-email mr-1"></i>{{ site.email }}</p>
+                </address>
+              </div>
+            </div>
+          </div>
+        </div>
+      </aside>
+      <footer class="ms-footer">
+        <div class="container">
+          <p>Copyright © 2016-2017 佛山市顺德区咖纳贸易有限公司 | <a href="http://www.miitbeian.gov.cn/" target="_blank">粤ICP备16118060号-1</a> | <a href="{{ site.url }}/Sitemap.xml" target="_blank">Sitemap</a> | 网站建设与维护：<a href="https://gdky.net" target="_blank">开源网络</a></p>
+        </div>
+      </footer>
+      <div class="btn-back-top">
+        <a href="#" data-scroll id="back-top" class="btn-circle btn-circle-primary btn-circle-sm btn-circle-raised"><i class="zmdi zmdi-long-arrow-up"></i></a>
+      </div>
+    </div>
+    <div class="ms-slidebar sb-slidebar sb-left sb-style-overlay" id="ms-slidebar">
+      <div class="sb-slidebar-container">
+        <header class="ms-slidebar-header"></header>
+        <ul class="ms-slidebar-menu" id="slidebar-menu" role="tablist" aria-multiselectable="true">
+          <li><a class="link" href="{{ site.url }}"><i class="fa fa-home"></i>首页</a></li>
+          <li><a class="link" href="{{ site.url }}/about/"><i class="fa fa-copyright"></i>认识咖纳</a></li>
+          <li class="panel" role="tab" id="sch1">
+            <a class="collapsed" role="button" data-toggle="collapse" data-parent="#slidebar-menu" href="#sc1" aria-expanded="false" aria-controls="sc1"><i class="fa fa-coffee"></i>产品中心</a>
+            <ul id="sc1" class="panel-collapse collapse" role="tabpanel" aria-labelledby="sch1">
+              <li><a href="{{ site.url }}/coffee-machine/">咖啡机器</a></li>
+              <li><a href="{{ site.url }}/coffee-bean/">咖啡豆</a></li>
+              <li><a href="{{ site.url }}/coffee-ware/">咖啡器皿</a></li>
+            </ul>
+          </li>
+          <li class="panel" role="tab" id="sch2">
+            <a class="collapsed" role="button" data-toggle="collapse" data-parent="#slidebar-menu" href="#sc2" aria-expanded="false" aria-controls="sc2"><i class="fa fa-users"></i>咖啡活动</a>
+            <ul id="sc2" class="panel-collapse collapse" role="tabpanel" aria-labelledby="sch2">
+              <li><a href="{{ site.url }}/business/" class="dropdown-link">商业活动</a></li>
+              <li><a href="{{ site.url }}/commonweal/" class="dropdown-link">公益活动</a></li>
+            </ul>
+          </li>
+          <li><a class="link" href="{{ site.url }}/coffee-shop/"><i class="fa fa-handshake-o"></i>联盟咖啡店</a></li>
+          <li><a class="link" href="{{ site.url }}/video/"><i class="fa fa-video-camera"></i>视频展示</a></li>
+          <li><a class="link" href="https://weidian.com/?userid=970849833&winzoom=1"><i class="fa fa-shopping-cart"></i>咖纳商城</a></li>
+          <li><a class="link" href="{{ site.url }}/contact/"><i class="fa fa-phone"></i>联系我们</a></li>
+        </ul>
+      </div>
+    </div>
+    {% javascript application %}
+  </body>
+</html>
