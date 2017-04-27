@@ -32,6 +32,7 @@ layout: default
       <div class="card animated zoomInDown animation-delay-4">
         <div class="card-block">
           <h2>{{ page.title }}</h2>
+          <p class="lead">{{ page.description }}</p>
           <div class="mb-2 mt-4">
             <div class="row">
               <div class="col-sm-12">
@@ -40,7 +41,6 @@ layout: default
             </div>
           </div>
           <p class="lead"><a class="btn btn-raised btn-primary mr-1" href="javascript:void(0)" data-toggle="modal" data-target="#ms-account-modal"><i class="fa fa-shopping-cart"></i> 点击购买</a><a class="btn btn-raised btn-info mr-1" target="_blank" href="http://wpa.qq.com/msgrd?v=3&amp;uin={{ site.qq }}&amp;site=qq&amp;menu=yes"><i class="fa fa-qq"></i> QQ咨询</a><a class="btn btn-raised btn-success" href="tel:{{ site.tel }}"><i class="fa fa-phone"></i> 电话联系</a></p>
-          <p class="lead">{{ page.description }}</p>
           <ul class="list-unstyled">
             {{ content }}
           </ul>
