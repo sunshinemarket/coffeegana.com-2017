@@ -42,7 +42,7 @@
                   <form autocomplete="off">
                     <fieldset>
                       <p align="center"><img src="/images/assets/weidian.jpg" alt="咖纳商城"></p>
-                      <a class="btn btn-block btn-raised btn-primary" href="https://weidian.com/?userid=970849833&winzoom=1" target="_blank"><i class="fa fa-map-marker"></i> 进入咖纳商城</a>
+                      <a class="btn btn-block btn-raised btn-primary" href="{{ site.weidian }}" target="_blank"><i class="fa fa-map-marker"></i> 进入咖纳商城</a>
                     </fieldset>
                   </form>
                 </div>
@@ -79,7 +79,7 @@
                 <ul class="dropdown-menu dropdown-menu-left animated-2x animated fadeIn">
                   <li><a href="{{ site.url }}/coffee-bean/" class="dropdown-link">咖啡豆</a></li>
                   <li><a href="{{ site.url }}/coffee-machine/" class="dropdown-link">咖啡机器</a></li>
-                  <li><a href="{{ site.url }}/coffee-ware/" class="dropdown-link">器皿</a></li>
+                  <li><a href="{{ site.url }}/coffee-ware/" class="dropdown-link">咖啡器皿</a></li>
                 </ul>
               </li>
               <li class="{% if page.category == 'coffee-activities' %}dropdown active{% else %}dropdown{% endif %}">
@@ -113,7 +113,7 @@
                 <h3 class="ms-footbar-title text-center mb-2">咖纳商城</h3>
                 <div class="ms-footer-media">
                   <p align="center"><img src="/images/assets/weidian.jpg" alt="咖纳商城"></p>
-                  <p align="center"><a class="btn btn-raised btn-primary" href="https://weidian.com/?userid=970849833&winzoom=1" target="_blank"><i class="fa fa-map-marker"></i> 进入咖纳商城</a></p>
+                  <p align="center"><a class="btn btn-raised btn-primary" href="{{ site.weidian }}" target="_blank"><i class="fa fa-map-marker"></i> 进入咖纳商城</a></p>
                 </div>
               </div>
             </div>
@@ -163,7 +163,7 @@
           </li>
           <li><a class="link" href="{{ site.url }}/coffee-shop/"><i class="fa fa-handshake-o"></i>联盟咖啡店</a></li>
           <li><a class="link" href="{{ site.url }}/video/"><i class="fa fa-video-camera"></i>视频展示</a></li>
-          <li><a class="link" href="https://weidian.com/?userid=970849833&winzoom=1"><i class="fa fa-shopping-cart"></i>咖纳商城</a></li>
+          <li><a class="link" href="{{ site.weidian }}"><i class="fa fa-shopping-cart"></i>咖纳商城</a></li>
           <li><a class="link" href="{{ site.url }}/contact/"><i class="fa fa-phone"></i>联系我们</a></li>
         </ul>
       </div>
