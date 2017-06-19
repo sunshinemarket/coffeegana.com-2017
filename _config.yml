@@ -32,5 +32,4 @@ assets:
   compress:
     css: true
     js: true
-  cache: asset-cache
   gzip: []
