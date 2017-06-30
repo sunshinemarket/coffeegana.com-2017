@@ -82,7 +82,7 @@ full_title: 咖纳咖啡
   <div class="owl-carousel owl-theme">{% for post in site.categories["business"] %}
     <div class="card">
       <div class="withripple zoom-img">
-        <a href="{{ site.url }}{{ post.url }}"><img src="/images/coffee-activities/{{ post.image }}.jpg" alt="{{ post.title }}" class="img-responsive"></a>
+        <a href="{{ site.url }}{{ post.url }}"><img src="/images/{{ post.category }}/{{ post.image }}.jpg" alt="{{ post.title }}" class="img-responsive"></a>
       </div>
       <div class="card-block">
         <h3 class="color-primary">{{ post.title }}</h3>
@@ -92,7 +92,7 @@ full_title: 咖纳咖啡
     </div>{% endfor %}{% for post in site.categories["commonweal"] %}
     <div class="card">
       <div class="withripple zoom-img">
-        <a href="{{ site.url }}{{ post.url }}"><img src="/images/coffee-activities/{{ post.image }}.jpg" alt="{{ post.title }}" class="img-responsive"></a>
+        <a href="{{ site.url }}{{ post.url }}"><img src="/images/{{ post.category }}/{{ post.image }}.jpg" alt="{{ post.title }}" class="img-responsive"></a>
       </div>
       <div class="card-block">
         <h3 class="color-primary">{{ post.title }}</h3>
