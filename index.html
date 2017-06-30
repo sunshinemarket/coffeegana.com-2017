@@ -199,3 +199,19 @@ full_title: 咖纳咖啡
     </div>
   </div>
 </div>
+<div class="container">
+  <h2 class="text-center color-primary mt-6">咖啡知识</h2>
+  <div class="owl-dots"></div>
+  <div class="owl-carousel owl-theme">{% for post in site.categories["coffee-knowledge"] %}
+    <div class="card">
+      <div class="withripple zoom-img">
+        <a href="{{ site.url }}{{ post.url }}"><img src="/images/{{ post.category }}/{{ post.image }}.jpg" alt="{{ post.title }}" class="img-responsive"></a>
+      </div>
+      <div class="card-block">
+        <h3 class="color-primary">{{ post.title }}</h3>
+        <p>{{ post.description }}</p>
+        <p class="text-right"><a href="{{ site.url }}{{ post.url }}" class="btn btn-primary btn-raised text-right" role="button"><i class="zmdi zmdi-collection-image-o"></i> 阅读全文</a></p>
+      </div>
+    </div>{% endfor %}
+  </div>
+</div>
