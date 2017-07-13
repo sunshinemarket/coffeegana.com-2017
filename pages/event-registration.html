@@ -1,0 +1,36 @@
+---
+layout: pages
+permalink: /event-registration/
+category: coffee-activities
+title: 活动报名
+keywords: 活动报名
+description: 活动报名
+---
+<div class="container mt-4">
+  <div class="row">
+    <div class="col-md-12">{% for post in site.categories["event-registration"] %}
+      <article class="card card-primary wow zoomInRight mb-4">
+        <div class="card-block card-block-big">
+          <div class="row">
+            <div class="col-lg-6"><a href="{{ site.url }}{{ post.url }}"><img src="/images/{{ post.category }}/{{ post.image }}.jpg" alt="{{ post.title }}" class="img-responsive mb-4"></a></div>
+            <div class="col-lg-6 mb-4">
+              <h3 class="no-mt"><a href="{{ site.url }}{{ post.url }}">{{ post.title }}</a></h3>
+              <p>{{ post.description }}</p>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-lg-8">
+              <span class="ml-1 hidden-xs">
+                <i class="zmdi zmdi-time mr-05 color-info"></i>
+                <span class="color-medium-dark">{{ post.date | date:"%Y年%m月%d日" }}</span>
+              </span>
+            </div>
+            <div class="col-lg-4 text-right">
+              <a href="{{ site.url }}{{ post.url }}" class="btn btn-primary btn-raised btn-block animate-icon">马上报名<i class="ml-1 no-mr zmdi zmdi-long-arrow-right"></i></a>
+            </div>
+          </div>
+        </div>
+      </article>{% endfor %}
+    </div>
+  </div>
+</div>
